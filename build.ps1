@@ -1,16 +1,15 @@
 $ErrorActionPreference='silentlycontinue'
 rm -Force -Recurse build
 rm -Force -Recurse isobuild
-rm myos.iso
 
 
 # Build kernel
 mkdir build
 
 try {
-    win-i686-elf\bin\i686-elf-g++.exe -c kernel.c++ -o build\kernel.o -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
+    win-i686-elf\bin\i686-elf-gpp.exe -c kernel.cpp -o build\kernel.o -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
     win-i686-elf\bin\i686-elf-as.exe boot.s -o build\boot.o
-    win-i686-elf\bin\i686-elf-g++.exe -T linker.ld -o build\myos.bin -ffreestanding -O2 -nostdlib build\boot.o build\kernel.o -lgcc
+    win-i686-elf\bin\i686-elf-gpp.exe -T linker.ld -o build\myos.bin -ffreestanding -O2 -nostdlib build\boot.o build\kernel.o -lgcc
 }
 catch {
     echo 'Build failed!'
