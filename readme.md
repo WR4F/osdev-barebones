@@ -8,7 +8,7 @@ You can build a bootable ISO by running a script!
 
   1. Install [Qemu for Windows](https://qemu.weilnetz.de/w64/)
   2. Install Windows Subsystem for Linux ([How to set up WSL](https://youtu.be/Cvrqmq9A3tA?t=107))
-  3. Use this command to install GRUB with the ability to automatically generate a hybrid ISO (supporting both legacy BIOS and EFI), **run it inside of your WSL Bash shell**:
+  3. Use this command to install GRUB with the ability to automatically generate a hybrid ISO, supporting both legacy BIOS and EFI. **Run this inside of your WSL Bash shell**:
 
 ```bash
 # Depenencies for building a bootable hybrid ISO file using WSL
