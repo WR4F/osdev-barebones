@@ -1,6 +1,5 @@
 rm -rf build 2> /dev/null
 rm -rf isobuild 2> /dev/null
-rm myos.iso 2> /dev/null
 
 
 # Unzip large files
@@ -18,7 +17,7 @@ ls -l ./linux-i686-elf/libexec/gcc/i686-elf/*.tar.gz 2> /dev/null && (
 mkdir build
 
 ( # Try
-    linux-i686-elf/bin/i686-elf-g++ -c kernel.c++ -o build/kernel.o -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
+    linux-i686-elf/bin/i686-elf-g++ -c kernel.cpp -o build/kernel.o -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
     linux-i686-elf/bin/i686-elf-as boot.s -o build/boot.o
     linux-i686-elf/bin/i686-elf-g++ -T linker.ld -o build/myos.bin -ffreestanding -O2 -nostdlib build/boot.o build/kernel.o -lgcc
 ) || ( # Catch
