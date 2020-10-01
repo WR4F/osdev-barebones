@@ -16,7 +16,7 @@ sudo apt-get install -y grub || sudo apt-get install -y grub-pc
 sudo apt-get install -y xorriso grub-pc-bin
 ```
 
-Then **run in Windows** the `./build.ps1` and boot up with the ISO file in `build/myos.iso` using VirtualBox or Qemu!
+Then, **execute in _Windows_** the `./build.ps1` and boot up with the ISO file in `build/myos.iso` using VirtualBox or Qemu!
 
 ## Build with Linux
 
