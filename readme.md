@@ -12,7 +12,8 @@ You can build a bootable ISO by running a script!
 
 ```bash
 # Depenencies for building a bootable hybrid ISO file using WSL
-sudo apt-get install -y xorriso grub-legacy grub-pc-bin
+sudo apt-get install -y grub || sudo apt-get install -y grub-pc
+sudo apt-get install -y xorriso grub-pc-bin
 ```
 
 Then run `./build.ps1` and boot up with the ISO file in `build/myos.iso` using VirtualBox or Qemu!
