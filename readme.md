@@ -18,9 +18,14 @@ sudo apt-get install -y xorriso grub-pc-bin
 
 Then, **execute in _Windows_** the `./build.ps1` and boot up with the ISO file in `build/myos.iso` using VirtualBox or Qemu!
 
+
 ## Build with Linux
 
-> Don't use Windows Subsystem for Linux here - it has known bugs and won't work!
+Sorry! Not yet supported.
+
+
+<!--
+> NOTE: Don't use Windows Subsystem for Linux here - it has known bugs and won't work!
 >
 > Only tested on Debian, should work on all Debian-based systems, such as Ubuntu.
 
@@ -28,7 +33,8 @@ Install all needed dependencies with these commands:
 
 ```bash
 # Dependencies for compiling kernel
-sudo apt-get install -y build-essential binutils bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo libisl-dev
+sudo apt-get update
+sudo apt-get install -y build-essential binutils bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo libisl-dev lib32z1 lib32ncurses5 libc6
 
 # Depenencies for building a bootable hybrid ISO file using WSL
 sudo apt-get install -y xorriso grub-legacy grub-pc-bin
@@ -38,3 +44,4 @@ sudo apt-get install -y qemu-system-i386
 ```
 
 Then run `./build.sh` and boot up with the ISO file in `build/myos.iso` using VirtualBox or Qemu!
+-->
