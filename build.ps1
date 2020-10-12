@@ -19,8 +19,8 @@ win-i686-elf\bin\i686-elf-gpp.exe -T linker.ld -o build\myos.bin -ffreestanding 
 mkdir isobuild\boot\grub
 cp build\myos.bin isobuild\boot\myos.bin
 cp grub.cfg isobuild\boot\grub\grub.cfg
-# bash -c "grub-file --is-x86-multiboot build/myos.bin && echo 'Kernel bootable with GRUB!'"
-# bash -c "grub-mkrescue -o build/myos.iso isobuild 2> /dev/null && echo 'ISO ready!'"
+bash -c "grub-file --is-x86-multiboot build/myos.bin && echo 'Kernel bootable with GRUB!'"
+bash -c "grub-mkrescue -o build/myos.iso isobuild 2> /dev/null && echo 'ISO ready!'"
 
 
 # Launch with qemu
