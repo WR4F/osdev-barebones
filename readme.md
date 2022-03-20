@@ -4,6 +4,8 @@ This OS is written in C++ with a tiny bit of assembly!
 
 You can build a bootable ISO by running a script!
 
+This guide/example project would not have been possible without the help of the [OSDev Wiki](https://wiki.osdev.org/Main_Page)!
+
 ## Build with Windows
 
   1. Install [Qemu for Windows](https://qemu.weilnetz.de/w64/)
