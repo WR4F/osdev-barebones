@@ -16,7 +16,9 @@ sudo apt-get install -y grub || sudo apt-get install -y grub-pc
 sudo apt-get install -y xorriso grub-pc-bin
 ```
 
-Then, **execute in _Windows_** the `./build.ps1` and boot up with the ISO file in `build/myos.iso` using VirtualBox or Qemu!
+Then, **in _Windows_**:
+- Clone this repo (`git clone https://github.com/rslay/osdev-barebones`) or download the zip and unzip it somewhere
+- In powershell, go to the `osdev-barebones` repo folder, and run the `./build.ps1` and boot up with the ISO file in `build/myos.iso` using VirtualBox or Qemu!
 
 
 ## Build with Linux
