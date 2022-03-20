@@ -15,7 +15,7 @@ You can build a bootable ISO by running a script!
 
 ```bash
 # Depenencies for building a bootable hybrid ISO file using WSL
-sudo apt-get install -y grub || sudo apt-get install -y grub-pc
+sudo apt-get install -y grub || sudo apt-get install -y grub-pc # Try installing `grub` and if it fails, install `grub-pc` instead
 sudo apt-get install -y xorriso grub-pc-bin
 ```
 
