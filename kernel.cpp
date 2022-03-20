@@ -105,16 +105,18 @@ size_t terminal_row = 0;
 size_t terminal_column = 0;
 
 // Terminal buffer contents
-uint16_t* terminal_buffer = (uint16_t*) 0xB8000;
+uint16_t* terminal_buffer;
 
 // Background colors, mapped to defaults
 enum vga_color global_fg = VGA_COLOR_LIGHT_GREEN;
 enum vga_color global_bg = VGA_COLOR_DARK_GREY;
-uint8_t terminal_color = vga_entry_color(global_fg, global_bg);
+uint8_t terminal_color;
 
 // Initialize terminal and set buffer contents to blank values
 void kernel_initialize(void)
 {
+	terminal_buffer = (uint16_t*) 0xB8000; // Location of video memory, holds 2 bytes for each cell on the screen
+	terminal_color = vga_entry_color(global_fg, global_bg); // First byte is foreground color, second byte is background color
 	for (size_t y = 0; y < VGA_HEIGHT; y++) {
 		for (size_t x = 0; x < VGA_WIDTH; x++) {
 			const size_t index = y * VGA_WIDTH + x;
